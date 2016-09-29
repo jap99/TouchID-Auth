@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--AuthenticationVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AuthenticationVC" customModule="GoodProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,9 +20,68 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="VoG-IQ-azA"/>
+                    <connections>
+                        <segue destination="xam-Qx-ICw" kind="presentation" identifier="loggedInVC" id="dbX-dc-6lw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="840.79999999999995" y="647.22638680659679"/>
+        </scene>
+        <!--ProductsVC-->
+        <scene sceneID="aGV-pL-dMF">
+            <objects>
+                <viewController storyboardIdentifier="ProductsVC" id="xam-Qx-ICw" customClass="ProductsVC" customModule="GoodProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ref-gb-xy3"/>
+                        <viewControllerLayoutGuide type="bottom" id="SLv-yr-H3A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bA3-oe-luh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkL-aA-4Ky">
+                                <frame key="frameInset" minY="61" width="375" height="519"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnV-Ek-19d">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="2Hq-at-SZf"/>
+                                    <constraint firstAttribute="height" constant="40" id="m7M-n8-AHo"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgu-nA-TF6">
+                                <frame key="frameInset" minX="16" minY="600" width="343" height="47"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <state key="normal" title="Add To Cart">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="cnV-Ek-19d" secondAttribute="trailing" constant="17" id="6BU-Jg-ZBo"/>
+                            <constraint firstItem="Qgu-nA-TF6" firstAttribute="top" secondItem="UkL-aA-4Ky" secondAttribute="bottom" constant="20" id="6HP-zX-ylq"/>
+                            <constraint firstItem="Qgu-nA-TF6" firstAttribute="leading" secondItem="bA3-oe-luh" secondAttribute="leadingMargin" id="Ab5-ZO-A47"/>
+                            <constraint firstItem="SLv-yr-H3A" firstAttribute="top" secondItem="Qgu-nA-TF6" secondAttribute="bottom" constant="20" id="Ew7-cG-rKh"/>
+                            <constraint firstItem="SLv-yr-H3A" firstAttribute="top" secondItem="UkL-aA-4Ky" secondAttribute="bottom" constant="100" id="Mzv-fq-8I5"/>
+                            <constraint firstAttribute="trailing" secondItem="UkL-aA-4Ky" secondAttribute="trailing" id="c83-JF-MFf"/>
+                            <constraint firstItem="Qgu-nA-TF6" firstAttribute="trailing" secondItem="bA3-oe-luh" secondAttribute="trailingMargin" id="mZJ-hg-aKH"/>
+                            <constraint firstItem="UkL-aA-4Ky" firstAttribute="leading" secondItem="bA3-oe-luh" secondAttribute="leading" id="q6J-6n-bMz"/>
+                            <constraint firstItem="cnV-Ek-19d" firstAttribute="top" secondItem="ref-gb-xy3" secondAttribute="bottom" id="uIK-GN-fA4"/>
+                            <constraint firstItem="UkL-aA-4Ky" firstAttribute="top" secondItem="bA3-oe-luh" secondAttribute="top" constant="60" id="zAV-E8-thO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="UkL-aA-4Ky" id="fpx-6Q-DSZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ytH-Vf-QIZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1624.8" y="647.22638680659679"/>
         </scene>
     </scenes>
 </document>
