@@ -16,6 +16,12 @@ class ProductsVC: UIViewController {
 
     var searchURL = "http://54.191.35.66:8181/pfchang/api/buy?username=Michael&grandTotal=0"
    
+    @IBOutlet weak var cartLbl: UILabel!
+    
+    var cartQty = 0
+    
+    
+    
    /* var imageArray = [UIImage]()
     
    var imageviewsArray = [UIImageView]() // array of imageviews in scrollview
@@ -29,11 +35,24 @@ class ProductsVC: UIViewController {
  
  */
     
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.callAlamo(url: self.searchURL)
 }
+    @IBAction func addToCartBtnPressed(_ sender: AnyObject) {
+        cartQty = cartQty + 1
+        cartLbl.text = "\(cartQty)"
+        
+    }
+    
+    
+    
+    
     /*
          NotificationCenter.default.addObserver(self, selector: "rotated", name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         

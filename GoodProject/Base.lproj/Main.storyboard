@@ -45,13 +45,6 @@
                                 <frame key="frameInset" minY="61" width="375" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnV-Ek-19d">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="72" id="2Hq-at-SZf"/>
-                                    <constraint firstAttribute="height" constant="40" id="m7M-n8-AHo"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgu-nA-TF6">
                                 <frame key="frameInset" minX="16" minY="600" width="343" height="47"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -59,24 +52,36 @@
                                 <state key="normal" title="Add To Cart">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addToCartBtnPressed:" destination="xam-Qx-ICw" eventType="touchUpInside" id="2Se-wG-lAo"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Imr-uU-SDs">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="gIC-KI-zRR"/>
+                                    <constraint firstAttribute="height" constant="33" id="u0e-14-GOn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="cnV-Ek-19d" secondAttribute="trailing" constant="17" id="6BU-Jg-ZBo"/>
                             <constraint firstItem="Qgu-nA-TF6" firstAttribute="top" secondItem="UkL-aA-4Ky" secondAttribute="bottom" constant="20" id="6HP-zX-ylq"/>
                             <constraint firstItem="Qgu-nA-TF6" firstAttribute="leading" secondItem="bA3-oe-luh" secondAttribute="leadingMargin" id="Ab5-ZO-A47"/>
                             <constraint firstItem="SLv-yr-H3A" firstAttribute="top" secondItem="Qgu-nA-TF6" secondAttribute="bottom" constant="20" id="Ew7-cG-rKh"/>
                             <constraint firstItem="SLv-yr-H3A" firstAttribute="top" secondItem="UkL-aA-4Ky" secondAttribute="bottom" constant="100" id="Mzv-fq-8I5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Imr-uU-SDs" secondAttribute="trailing" constant="37" id="Sfx-CE-b5f"/>
                             <constraint firstAttribute="trailing" secondItem="UkL-aA-4Ky" secondAttribute="trailing" id="c83-JF-MFf"/>
                             <constraint firstItem="Qgu-nA-TF6" firstAttribute="trailing" secondItem="bA3-oe-luh" secondAttribute="trailingMargin" id="mZJ-hg-aKH"/>
+                            <constraint firstItem="Imr-uU-SDs" firstAttribute="top" secondItem="ref-gb-xy3" secondAttribute="bottom" id="pUX-aR-j1t"/>
                             <constraint firstItem="UkL-aA-4Ky" firstAttribute="leading" secondItem="bA3-oe-luh" secondAttribute="leading" id="q6J-6n-bMz"/>
-                            <constraint firstItem="cnV-Ek-19d" firstAttribute="top" secondItem="ref-gb-xy3" secondAttribute="bottom" id="uIK-GN-fA4"/>
                             <constraint firstItem="UkL-aA-4Ky" firstAttribute="top" secondItem="bA3-oe-luh" secondAttribute="top" constant="60" id="zAV-E8-thO"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="scrollView" destination="UkL-aA-4Ky" id="fpx-6Q-DSZ"/>
+                        <outlet property="cartLbl" destination="Imr-uU-SDs" id="VE8-Ho-Jh8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ytH-Vf-QIZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
