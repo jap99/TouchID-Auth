@@ -15,6 +15,7 @@
 		9F4B755B1D9A34C100C65AAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4B75591D9A34C100C65AAB /* LaunchScreen.storyboard */; };
 		9F4B75651D9A4E3200C65AAB /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4B75641D9A4E3200C65AAB /* LocalAuthentication.framework */; };
 		9F4B75671D9CE6F400C65AAB /* ProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B75661D9CE6F400C65AAB /* ProductsVC.swift */; };
+		9F4B756A1D9E2D2600C65AAB /* InfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B75691D9E2D2600C65AAB /* InfiniteScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		9F4B755C1D9A34C100C65AAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F4B75641D9A4E3200C65AAB /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		9F4B75661D9CE6F400C65AAB /* ProductsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsVC.swift; sourceTree = "<group>"; };
+		9F4B75691D9E2D2600C65AAB /* InfiniteScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfiniteScrollView.swift; path = ../InfiniteScrollView.swift; sourceTree = "<group>"; };
 		C7C7682BF5607869F942C9DB /* Pods_GoodProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 				9F4B75571D9A34C100C65AAB /* Assets.xcassets */,
 				9F4B75591D9A34C100C65AAB /* LaunchScreen.storyboard */,
 				9F4B755C1D9A34C100C65AAB /* Info.plist */,
+				9F4B75691D9E2D2600C65AAB /* InfiniteScrollView.swift */,
 				9F4B75661D9CE6F400C65AAB /* ProductsVC.swift */,
 			);
 			path = GoodProject;
@@ -222,6 +225,7 @@
 				9F4B75671D9CE6F400C65AAB /* ProductsVC.swift in Sources */,
 				9F4B75531D9A34C100C65AAB /* AuthenticationVC.swift in Sources */,
 				9F4B75511D9A34C100C65AAB /* AppDelegate.swift in Sources */,
+				9F4B756A1D9E2D2600C65AAB /* InfiniteScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
